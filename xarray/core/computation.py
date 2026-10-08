@@ -1809,16 +1809,13 @@ def where(cond, x, y):
         equivalent methods
     """
     # alignment for three arguments is complicated, so don't support it yet
-    # Put the value arguments first so apply_ufunc takes attributes and the
-    # result name from the selected data rather than from the condition.
     return apply_ufunc(
-        lambda x, y, cond: duck_array_ops.where(cond, x, y),
+        duck_array_ops.where,
+        cond,
         x,
         y,
-        cond,
         join="exact",
         dataset_join="exact",
-        keep_attrs=True,
         dask="allowed",
     )
 
