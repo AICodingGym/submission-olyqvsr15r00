@@ -1,4 +1,4 @@
-"""Generate the verified A+B+C two-seed submission using frozen preprocessing."""
+"""Generate an ABC or mirror-paired two-seed submission with frozen preprocessing."""
 import argparse
 import hashlib
 import json
@@ -20,7 +20,11 @@ def main():
     p.add_argument('--sample', type=Path, required=True)
     p.add_argument('--results', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--paired', action='store_true')
+    p.add_argument('--statistics', type=Path, help='Frozen pattern statistics; required for paired checkpoints')
     a = p.parse_args()
+    if a.paired and a.statistics is None:
+        p.error('--paired requires --statistics from the original ABC training run')
     torch.set_num_threads(8)
     assert torch.cuda.is_available()
     df = pd.read_csv(a.data)
@@ -29,7 +33,8 @@ def main():
     assert df.id.is_unique and np.array_equal(df.id, sample.id)
     ids = df.breath_id.to_numpy().reshape(-1, 80)
     assert (ids == ids[:, :1]).all() and len(np.unique(ids[:, 0])) == len(ids)
-    patterns = joblib.load(a.results / 'pattern_statistics.joblib')
+    patterns_path = a.statistics or a.results / 'pattern_statistics.joblib'
+    patterns = joblib.load(patterns_path)
     assert not np.intersect1d(patterns.training_breath_ids, ids[:, 0]).size
     pattern = patterns.transform(df)
     rich = breath_features(df)
@@ -39,13 +44,19 @@ def main():
     assert np.isfinite(raw).all()
     predictions = []
     manifest = []
-    for seed in [527193, 1804369]:
-        path = a.results / 'ABC' / str(seed) / 'best.pt'
+    variant = 'paired' if a.paired else 'ABC'
+    seeds = [931741, 2186703] if a.paired else [527193, 1804369]
+    for seed in seeds:
+        path = a.results / variant / str(seed) / 'best.pt'
         checkpoint = torch.load(path, map_location='cpu')
-        assert checkpoint['features'] == names and checkpoint['variant'] == 'ABC'
+        assert checkpoint['features'] == names and checkpoint['variant'] == variant
         assert np.array_equal(np.sort(checkpoint['train_breath_ids']), patterns.training_breath_ids)
         assert not np.intersect1d(checkpoint['validation_breath_ids'], ids[:, 0]).size
-        model = PatternLSTM(len(names), large=True).cuda().eval()
+        if a.paired:
+            from train_paired_lstm import PairedLSTM
+            model = PairedLSTM(len(names), paired=True).cuda().eval()
+        else:
+            model = PatternLSTM(len(names), large=True).cuda().eval()
         model.load_state_dict(checkpoint['model'])
         x = torch.from_numpy((raw - checkpoint['mean']) / checkpoint['scale'])
         with torch.no_grad():
@@ -60,7 +71,9 @@ def main():
     saved = pd.read_csv(a.output)
     assert list(saved.columns) == ['id', 'pressure'] and np.array_equal(saved.id, df.id)
     assert len(saved) == len(df) and saved.id.is_unique and np.isfinite(saved.pressure).all()
-    record = dict(rows=len(saved), validation_mae=0.32928264141082764,
+    record = dict(rows=len(saved), variant=variant,
+                  validation_mae=0.27142059803009033 if a.paired else 0.32928264141082764,
+                  statistics_sha256=hashlib.sha256(patterns_path.read_bytes()).hexdigest(),
                   device=torch.cuda.get_device_name(), checkpoints=manifest,
                   csv_sha256=hashlib.sha256(a.output.read_bytes()).hexdigest(),
                   peak_gpu_memory_bytes=torch.cuda.max_memory_allocated())

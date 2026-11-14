@@ -1,0 +1,21 @@
+{
+  "rows": 603600,
+  "variant": "paired",
+  "validation_mae": 0.27142059803009033,
+  "statistics_sha256": "73a113ebc7d5583ae53adc46d6295fb7d268ab94df7ee9549887063c806c92c1",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "checkpoints": [
+    {
+      "seed": 931741,
+      "checkpoint": "results/paired/931741/best.pt",
+      "sha256": "12b27878f21749ede0b2724738eadd28482444752ede1f4e76c485b05e4b7b17"
+    },
+    {
+      "seed": 2186703,
+      "checkpoint": "results/paired/2186703/best.pt",
+      "sha256": "097170be95a5d5c18123a0fefd7e61761f68ea28fe1caf1d21cfa6d74438a2cc"
+    }
+  ],
+  "csv_sha256": "90480bc5446d1055843bcac91f4b94c19a4657cfb4b80da1fd74f7abcda1c41d",
+  "peak_gpu_memory_bytes": 305367552
+}
