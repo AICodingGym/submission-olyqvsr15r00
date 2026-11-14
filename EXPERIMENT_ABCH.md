@@ -41,3 +41,35 @@ ensemble evaluation asserts identical targets, IDs and masks across all runs.
 
 Submission H succeeded: CLI returned score **0.72202**. Receipt saved in
 `approved_abch_experiment/submission_receipt.json`.
+
+## Completed results
+
+All branches used the exact original 500 held-out breaths and 15,177 scored rows.
+All saved checkpoint scores reproduced; targets, IDs, masks and finite predictions
+were verified locally after downloading the artifacts.
+
+| Branch | GRU mean | LSTM mean | TCN mean | LSTM+TCN mean | Recorded training/validation minutes |
+|---|---:|---:|---:|---:|---:|
+| B | 0.694126 | 0.691858 | 0.661838 | 0.654759 | 4.56 |
+| C | 0.682594 | 0.679270 | 0.646022 | 0.640911 | 5.11 |
+| A | 0.644822 | 0.643859 | 0.620099 | 0.611418 | 15.62 |
+
+C improved all nine paired best-checkpoint scores versus B. Its LSTM+TCN ensemble
+improved 2.1% over B, supporting inspiratory MAE on this reused validation set.
+A had the lowest MAE, 0.611418 (13.8% below the original 0.709342). All-model mean
+was nearly tied at 0.612495. GRU remains retained in every experiment.
+A and C were not combined; full-data masked-MAE training has not been tested.
+A uses more optimizer updates than B for the same epoch count, so this does not
+isolate dataset size from total training exposure.
+All checkpoint artifacts are saved locally and in the DataHub home directory.
+
+## Leaderboard outcomes
+
+| Submission | Local MAE | AI Coding Gym MAE |
+|---|---:|---:|
+| Original 20k LSTM+TCN mean | 0.709342 | 0.72202 |
+| A full-data LSTM+TCN mean | 0.611418 | 0.61766 |
+
+Both uploads succeeded with session-log uploads disabled. Improved CSV and receipts
+are in approved_abch_experiment/. No further training is running from this suite;
+the GPU pod remains allocated.
