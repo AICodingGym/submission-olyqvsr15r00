@@ -44,3 +44,40 @@ required at inference. Equal-weight means are evaluated; no validation-fitted we
 
 This is a short screening budget, not a definitive ranking of architectures.
 The repeatedly used holdout remains exploratory. The current submission is preserved.
+
+## Results
+
+All 18 runs completed five epochs. Parent prediction identity and saved-checkpoint
+MAE reproduction checks passed. Downloaded validation IDs, truth and masks exactly
+match experiment A; all predictions are finite.
+
+| LSTM branch | LSTM three-seed mean | Combined with unchanged TCN | Combined with MAE-trained TCN |
+|---|---:|---:|---:|
+| mse_control | 0.621467 | 0.603382 | 0.582987 |
+| mae | 0.609330 | 0.595295 | 0.577942 |
+| delta | 0.612764 | 0.596886 | 0.579178 |
+| categorical | 0.610427 | 0.595367 | 0.577970 |
+| cnn | 0.609411 | 0.595227 | 0.577805 |
+
+Original selected ensemble: 0.611418. Best observed: CNN-LSTM + MAE-TCN,
+0.577805 (5.5% lower local MAE). The unchanged MAE-LSTM + MAE-TCN ensemble
+is nearly tied at 0.577942; the 0.000136 difference is not persuasive evidence
+for preferring the CNN architecture. Delta and categorical variants did not beat
+loss-only continuation in this short screening budget.
+MSE LSTM control mean: 0.621467; MAE LSTM mean: 0.609330, so the paired control
+supports MAE beyond additional training for LSTM. TCN had no new paired MSE
+continuation control in this screen, so its gains cannot be attributed solely
+to the loss change.
+Recorded training/validation time: 1,013.95 seconds (16.9 minutes), excluding
+preprocessing, checkpoint I/O, transfers and setup. The original model is preserved.
+
+## Submission status
+
+The selected ensemble CSV passed local and remote format checks: 603,600 rows,
+exact sample-submission IDs, finite pressures, six checkpoint hashes and matching
+CSV checksum. File: strategy_experiment/submission_strategies.csv.
+
+The upload command did not run: automatic approval review rejected this new
+prediction payload, requiring explicit payload-specific approval to upload it to
+AI Coding Gym. No workaround or retry was attempted. Current verified leaderboard
+MAE remains 0.61766; 0.577805 is local validation only.
