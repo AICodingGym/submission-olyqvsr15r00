@@ -22,3 +22,32 @@ GRU is our experiment, not a reproduction of the writeup's architecture.
 
 Scripts: gru_long.py --bidirectional and evaluate_gru_abc.py.
 Runtime measurements include epoch training/validation but exclude checkpoint writes.
+
+## Observed results
+
+All models evaluated on the same 15,177 inspiratory rows.
+
+| Model | MAE |
+|---|---:|
+| forward_1844954159 | 1.261023 |
+| forward_568154637 | 1.247273 |
+| forward_2119916341 | 1.279933 |
+| forward_mean | 1.214631 |
+| forward_median | 1.219959 |
+| bidirectional_1321964005 | 1.106565 |
+| bidirectional_1277287051 | 1.069425 |
+| bidirectional_1592780024 | 1.138669 |
+| bidirectional_mean | 1.042093 |
+| bidirectional_median | 1.059553 |
+
+Bidirectional runs each completed 50 epochs; training/validation durations: 26.63s, 24.92s, 26.89s.
+Forward models have 41,345 parameters; bidirectional models have 107,265.
+
+R=50,C=10 improved from 2.357875 to 1.551871 MAE with the mean ensemble,
+but remains the highest-error lung setting. Two R/C groups worsened slightly.
+Saturated rows and abrupt-change rows had lower MAE than their complements;
+these diagnostics do not support assuming those conditions dominate errors.
+
+All six checkpoint predictions reproduced recorded MAE within 1e-5.
+Artifacts and checkpoints are in gru_abc_experiment/ locally and on DataHub.
+No leaderboard submission was made.
