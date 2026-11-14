@@ -1,0 +1,13 @@
+{
+  "control": 0.5231647491455078,
+  "A": 0.4615616500377655,
+  "AB": 0.4001665711402893,
+  "ABC": 0.32928264141082764,
+  "prior_best": 0.5674035029389628,
+  "relative_improvement_vs_prior": 0.4196675915723955,
+  "relative_improvement_vs_control": 0.37059474678167914,
+  "training_minutes": 44.35370605996965,
+  "validation_breaths": 500,
+  "scored_rows": 15177,
+  "local_prediction_audit_passed": true
+}

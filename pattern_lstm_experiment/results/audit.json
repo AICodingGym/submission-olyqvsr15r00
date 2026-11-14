@@ -1,0 +1,12 @@
+{
+  "train_breaths": 67405,
+  "validation_breaths": 500,
+  "train_only_pattern_statistics": true,
+  "pressure_excluded_from_inputs": true,
+  "unseen_validation_fraction": 0.00022499999613501132,
+  "checkpoints_reloaded": 8,
+  "checkpoint_prediction_replay_max_difference": 0.0,
+  "validation_ids_truth_mask_exact_match": true,
+  "training_id_sets_match_pattern_fit": true,
+  "ensemble_equals_two_seed_mean": true
+}

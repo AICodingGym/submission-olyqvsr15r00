@@ -50,3 +50,70 @@ Compare absolute scores separately against the existing six-model ensemble
 Repeated use of the 500-breath holdout introduces model-selection optimism;
 these scores are exploratory local validation, not independent leaderboard results.
 No submission is part of this experiment.
+
+
+## Completed results — November 13, 2026
+
+All eight runs completed 40 epochs on the allocated GTX 1080 Ti. Total training
+time was 44.35 minutes, excluding preprocessing and verification. Seeds were
+527193 and 1804369. The fixed validation set contains 15,177 scored rows.
+
+| Variant | Seed 527193 best | Seed 1804369 best | Two-seed mean prediction MAE |
+| --- | ---: | ---: | ---: |
+| control | 0.54827 | 0.56314 | 0.52316 |
+| A | 0.47783 | 0.50398 | 0.46156 |
+| AB | 0.43111 | 0.41453 | 0.40017 |
+| **ABC** | **0.35611** | **0.35134** | **0.32928** |
+
+The ABC ensemble is the new leading local candidate, improving by 41.97% over
+the previous corrected ensemble (0.56740350), and 37.06% over this experiment's
+matched control. Each incremental change improves both individual seed results
+and the corresponding two-seed ensemble. The current experiment's small-model
+control is a plain BiLSTM, not the previous CNN-BiLSTM + TCN ensemble.
+
+The larger network has 1,954,177 parameters (small control: 110,769). Its two best
+checkpoints are at epochs 40 and 39, respectively. The first run's learning rate
+remained 0.001; the second reached 0.00025. Both are near the epoch ceiling,
+so a longer, lower-learning-rate continuation is a reasonable next experiment.
+These observations do not prove that more training will improve validation.
+The target MAE 0.2 has not yet been reached.
+
+### Verification
+
+- Feature checks passed: exact group means/deviation identities, unseen-group
+  fallback, frozen aggregation tables, and no cross-breath shift contamination.
+- A GPU smoke test exposed amplification of constant training features; constant
+  feature scales now use 1 rather than 1e-6. The corrected smoke test passed before
+  all full runs. The unseen-group flag was the relevant constant feature.
+- All 67,405 training breath IDs match the fitted pattern-table ID set; none
+  overlap the original 500 validation breaths. Compare sets because input breath
+  IDs are not sorted in the dataset.
+- Only nine validation rows out of 40,000 had unseen pattern keys.
+- Reloaded all eight saved checkpoints, regenerated features using the saved
+  training-only table and normalizers, and reproduced predictions exactly
+  (maximum absolute difference 0.0 for each run).
+- Verified validation ID order, pressure labels, inspiratory masks, finite outputs,
+  and equality of each ensemble to the mean of its two saved member predictions.
+
+The larger model is trained from scratch; no prior residual correction was reused.
+The old models remain intact. These are local validation results with repeated
+holdout use, not independent leaderboard scores. No test predictions were submitted.
+
+### Artifacts and reproduction
+
+Source: `pattern_features.py` and `train_pattern_lstm.py`.
+Results: `pattern_lstm_experiment/results/{results,summary,audit,config}.json`.
+Training-only statistics: `pattern_lstm_experiment/results/pattern_statistics.joblib`.
+Winning checkpoints: `pattern_lstm_experiment/results/ABC/{527193,1804369}/best.pt`.
+Winning validation ensemble: `pattern_lstm_experiment/results/ABC/ensemble.npz`.
+Each run directory also contains `history.json` and `validation.npz`.
+
+On the DataHub pod, from the experiment directory, reproduce into a NEW output
+folder (the training script starts from scratch and is not a resume command):
+
+```sh
+OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8 MKL_NUM_THREADS=8 python -u train_pattern_lstm.py \
+  --data ../train.csv \
+  --reference ../strategy_experiment/results/ensemble_predictions.npz \
+  --output reproduction_results --seeds 527193 1804369 --epochs 40
+```

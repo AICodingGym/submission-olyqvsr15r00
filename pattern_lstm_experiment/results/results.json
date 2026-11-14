@@ -1,0 +1,74 @@
+[
+  {
+    "variant": "control",
+    "seed": 527193,
+    "mae": 0.5482725501060486,
+    "best_epoch": 37,
+    "epochs": 40,
+    "parameters": 110769,
+    "seconds": 162.95488418685272
+  },
+  {
+    "variant": "control",
+    "seed": 1804369,
+    "mae": 0.5631371140480042,
+    "best_epoch": 39,
+    "epochs": 40,
+    "parameters": 110769,
+    "seconds": 161.78735033702105
+  },
+  {
+    "variant": "A",
+    "seed": 527193,
+    "mae": 0.47783246636390686,
+    "best_epoch": 40,
+    "epochs": 40,
+    "parameters": 114353,
+    "seconds": 156.5572862192057
+  },
+  {
+    "variant": "A",
+    "seed": 1804369,
+    "mae": 0.5039823055267334,
+    "best_epoch": 38,
+    "epochs": 40,
+    "parameters": 114353,
+    "seconds": 160.6828672029078
+  },
+  {
+    "variant": "AB",
+    "seed": 527193,
+    "mae": 0.4311095178127289,
+    "best_epoch": 37,
+    "epochs": 40,
+    "parameters": 129585,
+    "seconds": 169.73640052508563
+  },
+  {
+    "variant": "AB",
+    "seed": 1804369,
+    "mae": 0.41453272104263306,
+    "best_epoch": 40,
+    "epochs": 40,
+    "parameters": 129585,
+    "seconds": 178.37745201401412
+  },
+  {
+    "variant": "ABC",
+    "seed": 527193,
+    "mae": 0.3561142683029175,
+    "best_epoch": 40,
+    "epochs": 40,
+    "parameters": 1954177,
+    "seconds": 837.5502418968827
+  },
+  {
+    "variant": "ABC",
+    "seed": 1804369,
+    "mae": 0.351339191198349,
+    "best_epoch": 39,
+    "epochs": 40,
+    "parameters": 1954177,
+    "seconds": 833.5758812162094
+  }
+]
