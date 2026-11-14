@@ -1,0 +1,52 @@
+[
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 1529411604,
+    "epoch": 1,
+    "validation_mae": 0.6874940991401672,
+    "mean_batch_loss": 0.9067945575353327,
+    "epoch_seconds": 15.124198457226157,
+    "elapsed_seconds": 15.124198457226157
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 1529411604,
+    "epoch": 2,
+    "validation_mae": 0.6801522374153137,
+    "mean_batch_loss": 0.8523821068742086,
+    "epoch_seconds": 12.805416211951524,
+    "elapsed_seconds": 27.92961466917768
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 1529411604,
+    "epoch": 3,
+    "validation_mae": 0.6697503328323364,
+    "mean_batch_loss": 0.8088174483664851,
+    "epoch_seconds": 12.358945832587779,
+    "elapsed_seconds": 40.28856050176546
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 1529411604,
+    "epoch": 4,
+    "validation_mae": 0.6756002306938171,
+    "mean_batch_loss": 0.7748805244663475,
+    "epoch_seconds": 10.839773922692984,
+    "elapsed_seconds": 51.128334424458444
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 1529411604,
+    "epoch": 5,
+    "validation_mae": 0.6454242467880249,
+    "mean_batch_loss": 0.749326168581336,
+    "epoch_seconds": 9.85507090901956,
+    "elapsed_seconds": 60.983405333478004
+  }
+]

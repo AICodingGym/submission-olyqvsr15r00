@@ -1,0 +1,83 @@
+[
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 1,
+    "train_loss": 0.5719983406112744,
+    "validation_mae": 0.7941500544548035,
+    "epoch_seconds": 3.010612373240292,
+    "elapsed_seconds": 3.010612373240292
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 2,
+    "train_loss": 0.5602648190351633,
+    "validation_mae": 0.7735889554023743,
+    "epoch_seconds": 3.038867444265634,
+    "elapsed_seconds": 6.049479817505926
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 3,
+    "train_loss": 0.5602584963440895,
+    "validation_mae": 0.7732957005500793,
+    "epoch_seconds": 3.0055630588904023,
+    "elapsed_seconds": 9.055042876396328
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 4,
+    "train_loss": 0.5540549570688834,
+    "validation_mae": 0.7574138045310974,
+    "epoch_seconds": 2.742276829201728,
+    "elapsed_seconds": 11.797319705598056
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 5,
+    "train_loss": 0.5514210288249529,
+    "validation_mae": 0.7730613350868225,
+    "epoch_seconds": 2.401822625193745,
+    "elapsed_seconds": 14.199142330791801
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 6,
+    "train_loss": 0.543394270832722,
+    "validation_mae": 0.7635162472724915,
+    "epoch_seconds": 2.403398542199284,
+    "elapsed_seconds": 16.602540872991085
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 7,
+    "train_loss": 0.5420672523883673,
+    "validation_mae": 0.7654162645339966,
+    "epoch_seconds": 2.464743294287473,
+    "elapsed_seconds": 19.067284167278558
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 8,
+    "train_loss": 0.5383756948526089,
+    "validation_mae": 0.7635395526885986,
+    "epoch_seconds": 2.3843113239854574,
+    "elapsed_seconds": 21.451595491264015
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 9,
+    "train_loss": 0.5298841494505222,
+    "validation_mae": 0.7671967148780823,
+    "epoch_seconds": 2.648935404140502,
+    "elapsed_seconds": 24.100530895404518
+  }
+]

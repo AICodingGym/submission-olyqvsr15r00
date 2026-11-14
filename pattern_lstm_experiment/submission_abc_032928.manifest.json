@@ -1,0 +1,19 @@
+{
+  "rows": 603600,
+  "validation_mae": 0.32928264141082764,
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "checkpoints": [
+    {
+      "seed": 527193,
+      "checkpoint": "results/ABC/527193/best.pt",
+      "sha256": "5462623cb8a6368a1c1e0fd6415854776a0677cb8b4323e2ad9fbe80aaed1a64"
+    },
+    {
+      "seed": 1804369,
+      "checkpoint": "results/ABC/1804369/best.pt",
+      "sha256": "d836649e8b1582a1f5c06342808e71c13bc6074c93c6d8fc5124f680cfad8d63"
+    }
+  ],
+  "csv_sha256": "4cb3d0875643b0e9f348a072458277d73926ef3e58c51433ea154d2bfcdbbeb9",
+  "peak_gpu_memory_bytes": 284223488
+}

@@ -1,0 +1,10 @@
+{
+  "competition": "ventilator-pressure-prediction",
+  "csv": "submission_current.csv",
+  "score": 0.72202,
+  "status": "CLI reported success and score",
+  "recorded_at": "2026-11-13T19:38:52.936631-08:00",
+  "validation_mae": 0.7093420028686523,
+  "logs_uploaded": false,
+  "results_url": "https://aicodinggym.com/challenges/mle/ventilator-pressure-prediction"
+}

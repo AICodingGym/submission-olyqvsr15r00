@@ -1,0 +1,92 @@
+[
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 1,
+    "train_loss": 0.5321507399357283,
+    "validation_mae": 0.7431706190109253,
+    "epoch_seconds": 4.329554361756891,
+    "elapsed_seconds": 4.329554361756891
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 2,
+    "train_loss": 0.532098099901126,
+    "validation_mae": 0.7834396362304688,
+    "epoch_seconds": 3.7902760189026594,
+    "elapsed_seconds": 8.11983038065955
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 3,
+    "train_loss": 0.5312911584881636,
+    "validation_mae": 0.7401598691940308,
+    "epoch_seconds": 3.930997504852712,
+    "elapsed_seconds": 12.050827885512263
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 4,
+    "train_loss": 0.5249240067738753,
+    "validation_mae": 0.7542388439178467,
+    "epoch_seconds": 4.172795133199543,
+    "elapsed_seconds": 16.223623018711805
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 5,
+    "train_loss": 0.5161970175642233,
+    "validation_mae": 0.7749552130699158,
+    "epoch_seconds": 4.59847870003432,
+    "elapsed_seconds": 20.822101718746126
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 6,
+    "train_loss": 0.5154327938969319,
+    "validation_mae": 0.7008805274963379,
+    "epoch_seconds": 4.590559963136911,
+    "elapsed_seconds": 25.412661681883037
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 7,
+    "train_loss": 0.5169681418629793,
+    "validation_mae": 0.7683769464492798,
+    "epoch_seconds": 4.635491602122784,
+    "elapsed_seconds": 30.04815328400582
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 8,
+    "train_loss": 0.5088450688490501,
+    "validation_mae": 0.7311193943023682,
+    "epoch_seconds": 3.6106992308050394,
+    "elapsed_seconds": 33.65885251481086
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 9,
+    "train_loss": 0.509953279884962,
+    "validation_mae": 0.7268943786621094,
+    "epoch_seconds": 3.789513968862593,
+    "elapsed_seconds": 37.44836648367345
+  },
+  {
+    "model": "tcn",
+    "seed": 413303905,
+    "epoch": 10,
+    "train_loss": 0.5045034020772348,
+    "validation_mae": 0.7157723903656006,
+    "epoch_seconds": 4.235376146156341,
+    "elapsed_seconds": 41.683742629829794
+  }
+]

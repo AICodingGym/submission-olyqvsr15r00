@@ -1,0 +1,52 @@
+[
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 1,
+    "validation_mae": 0.6753278970718384,
+    "mean_batch_loss": 0.9216243360111722,
+    "epoch_seconds": 12.520006621722132,
+    "elapsed_seconds": 12.520006621722132
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 2,
+    "validation_mae": 0.6828473210334778,
+    "mean_batch_loss": 0.85950603376872,
+    "epoch_seconds": 12.825645933393389,
+    "elapsed_seconds": 25.34565255511552
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 3,
+    "validation_mae": 0.6852765679359436,
+    "mean_batch_loss": 0.8121626892426577,
+    "epoch_seconds": 11.490469778887928,
+    "elapsed_seconds": 36.83612233400345
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 4,
+    "validation_mae": 0.6644099354743958,
+    "mean_batch_loss": 0.7795999293219096,
+    "epoch_seconds": 11.204742412082851,
+    "elapsed_seconds": 48.0408647460863
+  },
+  {
+    "strategy": "delta",
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 5,
+    "validation_mae": 0.647009551525116,
+    "mean_batch_loss": 0.7596086069584495,
+    "epoch_seconds": 12.425930675119162,
+    "elapsed_seconds": 60.46679542120546
+  }
+]

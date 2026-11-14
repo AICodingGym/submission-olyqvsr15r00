@@ -1,0 +1,38 @@
+{
+  "model": "tcn",
+  "seeds": [
+    413303905,
+    1649692426,
+    462049665
+  ],
+  "features": [
+    "R",
+    "C",
+    "time_step",
+    "u_in",
+    "u_out",
+    "u_in_cum",
+    "u_out_cum",
+    "u_in_prev1",
+    "u_in_prev2",
+    "u_in_prev3",
+    "u_in_prev4",
+    "u_in_prev8",
+    "u_out_prev1",
+    "u_in_roll3_mean",
+    "u_in_roll8_mean",
+    "step_in_breath",
+    "breath_progress",
+    "time_since_start",
+    "time_since_uout_change"
+  ],
+  "max_breaths": 67905,
+  "training_breaths": 67405,
+  "validation_breaths": 500,
+  "learning_rate": 0.0003,
+  "loss": "mse",
+  "epochs": 10,
+  "parent": "/home/jjqian/ventilator-pressure-prediction/sequence_20k_experiment/results/tcn",
+  "normalization": "frozen parent training-only normalization",
+  "gpu": "NVIDIA GeForce GTX 1080 Ti"
+}

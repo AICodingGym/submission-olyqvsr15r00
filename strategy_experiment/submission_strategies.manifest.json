@@ -1,0 +1,36 @@
+{
+  "rows": 603600,
+  "checkpoints": [
+    {
+      "checkpoint": "results/cnn/lstm/seed_1529411604_best.pt",
+      "sha256": "860535ad6af4a6d7e8a21cb8705b479a2cf6190b7db83abfe4b8894f16b5ce4b",
+      "seed": 1529411604
+    },
+    {
+      "checkpoint": "results/cnn/lstm/seed_2117974016_best.pt",
+      "sha256": "470f809a36fba2f72921c9114b8a89cac7a9b92f16a1fc1243e92e1a9b165382",
+      "seed": 2117974016
+    },
+    {
+      "checkpoint": "results/cnn/lstm/seed_595865800_best.pt",
+      "sha256": "196c55fe87e0c0390ddca855d986ab86902b5b9a881784678f1e99551014925f",
+      "seed": 595865800
+    },
+    {
+      "checkpoint": "results/mae/tcn/seed_413303905_best.pt",
+      "sha256": "1db3ad03e6ad7a12c494b3c58a967b67a465db83118ef8954b1db211d863dd18",
+      "seed": 413303905
+    },
+    {
+      "checkpoint": "results/mae/tcn/seed_1649692426_best.pt",
+      "sha256": "f876b53554a38aab27258004d369a94da75067361462e7e937994c4cab8346ec",
+      "seed": 1649692426
+    },
+    {
+      "checkpoint": "results/mae/tcn/seed_462049665_best.pt",
+      "sha256": "255610b43c403a88672f1631e2b661ec906cc3952f1583fb50abfc0566f4417e",
+      "seed": 462049665
+    }
+  ],
+  "csv_sha256": "ebbf38b135940070f9cdc91da500db195bd273201b73d99ff7bf253c05b2713a"
+}

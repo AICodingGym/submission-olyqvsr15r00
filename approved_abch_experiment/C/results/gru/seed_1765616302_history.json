@@ -1,0 +1,92 @@
+[
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 1,
+    "train_loss": 0.7552711246990998,
+    "validation_mae": 0.7742944955825806,
+    "epoch_seconds": 2.860513641964644,
+    "elapsed_seconds": 2.860513641964644
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 2,
+    "train_loss": 0.7458399161202388,
+    "validation_mae": 0.7631999850273132,
+    "epoch_seconds": 2.874973480589688,
+    "elapsed_seconds": 5.735487122554332
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 3,
+    "train_loss": 0.7410868267136648,
+    "validation_mae": 0.7543429136276245,
+    "epoch_seconds": 2.827364868018776,
+    "elapsed_seconds": 8.562851990573108
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 4,
+    "train_loss": 0.739321588093677,
+    "validation_mae": 0.7495228052139282,
+    "epoch_seconds": 2.378935795277357,
+    "elapsed_seconds": 10.941787785850465
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 5,
+    "train_loss": 0.7347662118484547,
+    "validation_mae": 0.7480561137199402,
+    "epoch_seconds": 2.8152767391875386,
+    "elapsed_seconds": 13.757064525038004
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 6,
+    "train_loss": 0.7308241614051088,
+    "validation_mae": 0.7532355189323425,
+    "epoch_seconds": 2.749134121928364,
+    "elapsed_seconds": 16.506198646966368
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 7,
+    "train_loss": 0.7273705197811076,
+    "validation_mae": 0.7617166638374329,
+    "epoch_seconds": 2.8080580360256135,
+    "elapsed_seconds": 19.31425668299198
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 8,
+    "train_loss": 0.7256144628322184,
+    "validation_mae": 0.7481978535652161,
+    "epoch_seconds": 2.8562396499328315,
+    "elapsed_seconds": 22.170496332924813
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 9,
+    "train_loss": 0.7223202582017334,
+    "validation_mae": 0.7551725506782532,
+    "epoch_seconds": 2.6946227261796594,
+    "elapsed_seconds": 24.865119059104472
+  },
+  {
+    "model": "gru",
+    "seed": 1765616302,
+    "epoch": 10,
+    "train_loss": 0.7147479736876481,
+    "validation_mae": 0.7592721581459045,
+    "epoch_seconds": 2.697323383297771,
+    "elapsed_seconds": 27.562442442402244
+  }
+]

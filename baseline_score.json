@@ -1,0 +1,19 @@
+{
+  "model": "ordinary_least_squares_with_intercept",
+  "features": [
+    "R",
+    "C",
+    "time_step",
+    "u_in",
+    "u_out"
+  ],
+  "seed": 42,
+  "validation_fraction_by_breath": 0.1,
+  "max_breaths": 5000,
+  "rows": 400000,
+  "breaths": 5000,
+  "train_breaths": 4500,
+  "validation_breaths": 500,
+  "validation_inspiratory_rows": 15177,
+  "validation_inspiratory_mae": 7.2993192237679
+}

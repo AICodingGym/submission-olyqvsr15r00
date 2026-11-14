@@ -1,0 +1,242 @@
+{
+  "individual_ensembles": {
+    "parent_lstm": 0.643858790397644,
+    "parent_tcn": 0.6200989484786987,
+    "mse_control_lstm": 0.6214665770530701,
+    "mae_lstm": 0.6093297004699707,
+    "mae_tcn": 0.5840129256248474,
+    "delta_lstm": 0.6127643585205078,
+    "categorical_lstm": 0.6104266047477722,
+    "cnn_lstm": 0.6094107627868652
+  },
+  "combinations": {
+    "reference": 0.6114177107810974,
+    "mse_control_parent_tcn": 0.6033822894096375,
+    "mse_control_mae_tcn": 0.58298659324646,
+    "mae_parent_tcn": 0.5952950119972229,
+    "mae_mae_tcn": 0.5779415369033813,
+    "delta_parent_tcn": 0.5968863368034363,
+    "delta_mae_tcn": 0.5791783332824707,
+    "categorical_parent_tcn": 0.5953671932220459,
+    "categorical_mae_tcn": 0.577970027923584,
+    "cnn_parent_tcn": 0.5952274799346924,
+    "cnn_mae_tcn": 0.5778053998947144
+  },
+  "selected": "cnn_mae_tcn",
+  "selected_folders": [
+    "/home/jjqian/ventilator-pressure-prediction/strategy_experiment/results/cnn/lstm",
+    "/home/jjqian/ventilator-pressure-prediction/strategy_experiment/results/mae/tcn"
+  ],
+  "runs": {
+    "parent_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.7997773289680481,
+        "best_mae": 0.6703360080718994,
+        "best_epoch": 10,
+        "epochs_completed": 10,
+        "elapsed_seconds": 77.9964781193994
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.8339934945106506,
+        "best_mae": 0.6913244724273682,
+        "best_epoch": 10,
+        "epochs_completed": 10,
+        "elapsed_seconds": 88.08217400638387
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.7980243563652039,
+        "best_mae": 0.68059903383255,
+        "best_epoch": 10,
+        "epochs_completed": 10,
+        "elapsed_seconds": 88.1537804203108
+      }
+    ],
+    "parent_tcn": [
+      {
+        "seed": 413303905,
+        "parent_mae": 0.812651515007019,
+        "best_mae": 0.6788931488990784,
+        "best_epoch": 8,
+        "epochs_completed": 10,
+        "elapsed_seconds": 150.94449030514807
+      },
+      {
+        "seed": 1649692426,
+        "parent_mae": 0.8069252967834473,
+        "best_mae": 0.6603113412857056,
+        "best_epoch": 6,
+        "epochs_completed": 10,
+        "elapsed_seconds": 150.0772111872211
+      },
+      {
+        "seed": 462049665,
+        "parent_mae": 0.821013331413269,
+        "best_mae": 0.6662764549255371,
+        "best_epoch": 10,
+        "epochs_completed": 10,
+        "elapsed_seconds": 150.64189110929146
+      }
+    ],
+    "mse_control_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.6703360080718994,
+        "best_mae": 0.6565852165222168,
+        "best_epoch": 5,
+        "elapsed_seconds": 44.684726525098085,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.6913244724273682,
+        "best_mae": 0.6713127493858337,
+        "best_epoch": 4,
+        "elapsed_seconds": 43.268613850232214,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.68059903383255,
+        "best_mae": 0.6589651107788086,
+        "best_epoch": 4,
+        "elapsed_seconds": 41.65688451845199,
+        "epochs_completed": 5
+      }
+    ],
+    "mae_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.6703360080718994,
+        "best_mae": 0.6406647562980652,
+        "best_epoch": 5,
+        "elapsed_seconds": 44.76203625602648,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.6913244724273682,
+        "best_mae": 0.6628186106681824,
+        "best_epoch": 5,
+        "elapsed_seconds": 49.78376876981929,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.68059903383255,
+        "best_mae": 0.6478859186172485,
+        "best_epoch": 5,
+        "elapsed_seconds": 51.901123125106096,
+        "epochs_completed": 5
+      }
+    ],
+    "mae_tcn": [
+      {
+        "seed": 413303905,
+        "parent_mae": 0.6788931488990784,
+        "best_mae": 0.6336655020713806,
+        "best_epoch": 5,
+        "elapsed_seconds": 83.41935979248956,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 1649692426,
+        "parent_mae": 0.6603113412857056,
+        "best_mae": 0.6384257674217224,
+        "best_epoch": 5,
+        "elapsed_seconds": 77.56292258715257,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 462049665,
+        "parent_mae": 0.6662764549255371,
+        "best_mae": 0.6412575244903564,
+        "best_epoch": 4,
+        "elapsed_seconds": 79.5106140752323,
+        "epochs_completed": 5
+      }
+    ],
+    "delta_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.6703360080718994,
+        "best_mae": 0.6454242467880249,
+        "best_epoch": 5,
+        "elapsed_seconds": 60.983405333478004,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.6913244724273682,
+        "best_mae": 0.66131991147995,
+        "best_epoch": 5,
+        "elapsed_seconds": 64.53872580360621,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.68059903383255,
+        "best_mae": 0.647009551525116,
+        "best_epoch": 5,
+        "elapsed_seconds": 60.46679542120546,
+        "epochs_completed": 5
+      }
+    ],
+    "categorical_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.6703360080718994,
+        "best_mae": 0.6392568945884705,
+        "best_epoch": 5,
+        "elapsed_seconds": 57.801811513956636,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.6913244724273682,
+        "best_mae": 0.6646451950073242,
+        "best_epoch": 5,
+        "elapsed_seconds": 34.17127410648391,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.68059903383255,
+        "best_mae": 0.6495094299316406,
+        "best_epoch": 5,
+        "elapsed_seconds": 43.13816774543375,
+        "epochs_completed": 5
+      }
+    ],
+    "cnn_lstm": [
+      {
+        "seed": 1529411604,
+        "parent_mae": 0.6703360080718994,
+        "best_mae": 0.6368726491928101,
+        "best_epoch": 5,
+        "elapsed_seconds": 60.124897588044405,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 2117974016,
+        "parent_mae": 0.6913244724273682,
+        "best_mae": 0.663122832775116,
+        "best_epoch": 5,
+        "elapsed_seconds": 60.34417980723083,
+        "epochs_completed": 5
+      },
+      {
+        "seed": 595865800,
+        "parent_mae": 0.68059903383255,
+        "best_mae": 0.6399505138397217,
+        "best_epoch": 5,
+        "elapsed_seconds": 55.834885763935745,
+        "epochs_completed": 5
+      }
+    ]
+  },
+  "validation_breaths": 500,
+  "validation_rows": 15177
+}

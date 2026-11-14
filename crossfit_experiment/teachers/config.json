@@ -1,0 +1,11 @@
+{
+  "epochs": 10,
+  "pool_breaths": 12000,
+  "internal_validation_breaths": 1000,
+  "primary_validation_breaths": 500,
+  "folds": 3,
+  "split_seed": 20261113,
+  "learning_rate": 0.0003,
+  "loss": "inspiratory MAE",
+  "parent": "/home/jjqian/ventilator-pressure-prediction/sequence_20k_experiment/results"
+}

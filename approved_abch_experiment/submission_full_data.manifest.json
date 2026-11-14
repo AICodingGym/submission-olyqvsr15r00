@@ -1,0 +1,36 @@
+{
+  "rows": 603600,
+  "checkpoints": [
+    {
+      "checkpoint": "A/results/lstm/seed_1529411604_best.pt",
+      "sha256": "04b8bc52dea8a4d758f0a6ba19917dfb73197e76c6921615301d8f1de1dcbd26",
+      "seed": 1529411604
+    },
+    {
+      "checkpoint": "A/results/lstm/seed_2117974016_best.pt",
+      "sha256": "08555d6ad8564f67e0804de748d504dd169d373801a4ffd8ab0749b3a236dc02",
+      "seed": 2117974016
+    },
+    {
+      "checkpoint": "A/results/lstm/seed_595865800_best.pt",
+      "sha256": "5e4710fff208af3dffb8bc9240884291757404adcf3f442e3b97229fa15ce686",
+      "seed": 595865800
+    },
+    {
+      "checkpoint": "A/results/tcn/seed_413303905_best.pt",
+      "sha256": "acc4ee0b7903c2c2cc588113fc5e799a37e904e5b1703e1df507f0fe0dc636ed",
+      "seed": 413303905
+    },
+    {
+      "checkpoint": "A/results/tcn/seed_1649692426_best.pt",
+      "sha256": "e30dff84e8e2ffb4c5a6f0f0edcb9d8f8165345209e79a849549fa8b22b39026",
+      "seed": 1649692426
+    },
+    {
+      "checkpoint": "A/results/tcn/seed_462049665_best.pt",
+      "sha256": "48b2d856ce633578ee8ab83aeda94163ae4c24f02fba9ab89dfa2f338be024ea",
+      "seed": 462049665
+    }
+  ],
+  "csv_sha256": "4e9ae40c6d2bba1a025375056098213e811d6faac273768f2409a3e79ea250cb"
+}

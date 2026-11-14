@@ -1,0 +1,39 @@
+{
+  "seeds": [
+    1844954159,
+    568154637,
+    2119916341
+  ],
+  "epochs": 50,
+  "patience": 8,
+  "runs": 3,
+  "data": "/home/jjqian/ventilator-pressure-prediction/train.csv",
+  "max_breaths": 5000,
+  "split_seed": 42,
+  "features": [
+    "R",
+    "C",
+    "time_step",
+    "u_in",
+    "u_out",
+    "u_in_cum",
+    "u_out_cum",
+    "u_in_prev1",
+    "u_in_prev2",
+    "u_in_prev3",
+    "u_in_prev4",
+    "u_in_prev8",
+    "u_out_prev1",
+    "u_in_roll3_mean",
+    "u_in_roll8_mean",
+    "step_in_breath",
+    "breath_progress",
+    "time_since_start",
+    "time_since_uout_change"
+  ],
+  "learning_rate": 0.001,
+  "loss": "all-row MSE",
+  "batch_size_breaths": 51,
+  "gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "torch_version": "2.2.1+cu121"
+}

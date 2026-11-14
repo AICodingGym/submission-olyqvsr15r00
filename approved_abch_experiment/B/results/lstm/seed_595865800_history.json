@@ -1,0 +1,92 @@
+[
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 1,
+    "train_loss": 0.5572317954943731,
+    "validation_mae": 0.7559964060783386,
+    "epoch_seconds": 2.2363408911041915,
+    "elapsed_seconds": 2.2363408911041915
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 2,
+    "train_loss": 0.5449894112761204,
+    "validation_mae": 0.7635709047317505,
+    "epoch_seconds": 2.246493699029088,
+    "elapsed_seconds": 4.48283459013328
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 3,
+    "train_loss": 0.5440330005196424,
+    "validation_mae": 0.7530431151390076,
+    "epoch_seconds": 2.3587287426926196,
+    "elapsed_seconds": 6.841563332825899
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 4,
+    "train_loss": 0.5330305229058633,
+    "validation_mae": 0.7614043354988098,
+    "epoch_seconds": 2.4387368950992823,
+    "elapsed_seconds": 9.280300227925181
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 5,
+    "train_loss": 0.5367937155365944,
+    "validation_mae": 0.7715084552764893,
+    "epoch_seconds": 2.4714763169176877,
+    "elapsed_seconds": 11.751776544842869
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 6,
+    "train_loss": 0.5345555698779914,
+    "validation_mae": 0.7430775165557861,
+    "epoch_seconds": 2.3744566636160016,
+    "elapsed_seconds": 14.12623320845887
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 7,
+    "train_loss": 0.5295754573345184,
+    "validation_mae": 0.7362448573112488,
+    "epoch_seconds": 2.4550009821541607,
+    "elapsed_seconds": 16.58123419061303
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 8,
+    "train_loss": 0.5239513461268865,
+    "validation_mae": 0.7634741067886353,
+    "epoch_seconds": 2.4465430970303714,
+    "elapsed_seconds": 19.027777287643403
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 9,
+    "train_loss": 0.5220456065214597,
+    "validation_mae": 0.734260082244873,
+    "epoch_seconds": 2.4508300786837935,
+    "elapsed_seconds": 21.478607366327196
+  },
+  {
+    "model": "lstm",
+    "seed": 595865800,
+    "epoch": 10,
+    "train_loss": 0.5171583026785117,
+    "validation_mae": 0.7277852296829224,
+    "epoch_seconds": 2.761544908862561,
+    "elapsed_seconds": 24.240152275189757
+  }
+]
