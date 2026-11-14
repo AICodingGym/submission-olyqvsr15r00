@@ -1,0 +1,15 @@
+{
+  "control": 0.2760796844959259,
+  "paired": 0.27142059803009033,
+  "original_local_mae": 0.32928264141082764,
+  "relative_pairing_gain": 0.016875875797751183,
+  "training_minutes": 43.4371387298607,
+  "gpu_mean_all_samples": 95.14415781487102,
+  "gpu_median_all_samples": 97.0,
+  "gpu_mean_from_first_active_sample": 96.26958525345623,
+  "gpu_fraction_at_least_90_from_first_active_sample": 0.9854070660522274,
+  "peak_gpu_memory_mib": 6880.0,
+  "local_prediction_audit_passed": true,
+  "checkpoint_replay_max_difference": 0.0,
+  "checkpoint_training_validation_id_audit_passed": true
+}

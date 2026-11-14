@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "control",
+    "seed": 931741,
+    "parent_seed": 527193,
+    "mae": 0.27825456857681274,
+    "best_epoch": 38,
+    "epochs": 40,
+    "seconds": 633.1352785611525
+  },
+  {
+    "variant": "control",
+    "seed": 2186703,
+    "parent_seed": 1804369,
+    "mae": 0.30943626165390015,
+    "best_epoch": 36,
+    "epochs": 40,
+    "seconds": 636.481344693806
+  },
+  {
+    "variant": "paired",
+    "seed": 931741,
+    "parent_seed": 527193,
+    "mae": 0.27292147278785706,
+    "best_epoch": 38,
+    "epochs": 40,
+    "seconds": 668.5301837585866
+  },
+  {
+    "variant": "paired",
+    "seed": 2186703,
+    "parent_seed": 1804369,
+    "mae": 0.30329635739326477,
+    "best_epoch": 40,
+    "epochs": 40,
+    "seconds": 668.0815167780966
+  }
+]
