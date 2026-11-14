@@ -1,11 +1,14 @@
 """Compare saved per-model predictions, including fixed equal-weight ensembles."""
+import argparse
 import json
 from pathlib import Path
 import numpy as np
 
 
 def main():
-    root=Path('results')
+    p=argparse.ArgumentParser(__doc__)
+    p.add_argument('--root',type=Path,default=Path('results'))
+    root=p.parse_args().root
     predictions={}; rows=[]; reference=None
     for name in ('gru','lstm','tcn'):
         folder=root/name
