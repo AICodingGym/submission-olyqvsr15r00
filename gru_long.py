@@ -13,6 +13,16 @@ from torch.utils.data import DataLoader, TensorDataset
 from baseline_torch_lab import BASE_FEATURES, FEATURES, BreathGRU, engineer_features
 
 
+class BidirectionalGRU(nn.Module):
+    def __init__(self, n_features):
+        super().__init__()
+        self.gru = nn.GRU(n_features, 64, num_layers=2, batch_first=True, bidirectional=True)
+        self.head = nn.Linear(128, 1)
+
+    def forward(self, x):
+        return self.head(self.gru(x)[0]).squeeze(-1)
+
+
 def save_json(path, value):
     tmp = path.with_suffix('.tmp')
     tmp.write_text(json.dumps(value, indent=2) + '\n')
@@ -32,6 +42,7 @@ def main():
     p.add_argument('--epochs', type=int, default=50)
     p.add_argument('--patience', type=int, default=8)
     p.add_argument('--runs', type=int, default=3)
+    p.add_argument('--bidirectional', action='store_true')
     a = p.parse_args()
     if min(a.epochs, a.patience, a.runs) < 1:
         p.error('epochs, patience and runs must be positive')
@@ -42,6 +53,8 @@ def main():
     config_path = a.output / 'config.json'
     if config_path.exists():
         config = json.loads(config_path.read_text())
+        if config.get('bidirectional', False) != a.bidirectional:
+            raise ValueError('Resume architecture differs')
         for key, value in [('epochs', a.epochs), ('patience', a.patience), ('runs', a.runs), ('data', str(a.data.resolve()))]:
             if config[key] != value:
                 raise ValueError(f'Resume configuration differs: {key}')
@@ -51,7 +64,7 @@ def main():
             seed = secrets.randbelow(2**31)
             if seed not in seeds:
                 seeds.append(seed)
-        config = dict(seeds=seeds, epochs=a.epochs, patience=a.patience, runs=a.runs,
+        config = dict(bidirectional=a.bidirectional, seeds=seeds, epochs=a.epochs, patience=a.patience, runs=a.runs,
                       data=str(a.data.resolve()), max_breaths=5000, split_seed=42,
                       features=FEATURES, learning_rate=.001, loss='all-row MSE',
                       batch_size_breaths=51, gpu=torch.cuda.get_device_name(0),
@@ -82,7 +95,7 @@ def main():
         torch.cuda.manual_seed_all(seed)
         generator = torch.Generator().manual_seed(seed)
         loader = DataLoader(dataset, batch_size=51, shuffle=True, generator=generator, pin_memory=True)
-        model = BreathGRU(len(FEATURES)).cuda()
+        model = (BidirectionalGRU if a.bidirectional else BreathGRU)(len(FEATURES)).cuda()
         optimizer = torch.optim.Adam(model.parameters(), lr=.001)
         last_path = a.output / f'seed_{seed}_last.pt'
         best_path = a.output / f'seed_{seed}_best.pt'
