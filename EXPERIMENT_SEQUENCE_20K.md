@@ -32,3 +32,31 @@ reproduce recorded MAE; evaluation asserts identical targets, masks and breath I
 
 This is exploratory validation reused for selection, not an unbiased final test.
 No leaderboard upload or controller inversion is part of this experiment.
+
+## Results
+
+All nine runs completed 30 epochs. Original validation IDs, labels and masks
+were verified against the previous experiment. All checkpoint reload checks passed.
+
+| Model | Best single MAE | Mean ensemble MAE | Three-run training/validation seconds |
+|---|---:|---:|---:|
+| gru | 0.798127 | 0.745773 | 179.92 |
+| lstm | 0.798024 | 0.746310 | 185.98 |
+| tcn | 0.806925 | 0.730358 | 320.71 |
+
+| Equal-weight combination | MAE |
+|---|---:|
+| gru_lstm_mean | 0.728296 |
+| gru_tcn_mean | 0.717634 |
+| lstm_tcn_mean | 0.709342 |
+| all_mean | 0.710864 |
+
+Best observed score: LSTM + TCN ensemble, 0.709342; all-model mean: 0.710864.
+These are close; reused validation does not establish a statistically reliable winner.
+GRU and LSTM ensembles are essentially tied. TCN individual runs did not beat the
+best recurrent runs, but its ensemble and cross-architecture combinations helped.
+Previous 5k BiGRU mean: 1.042093; new 20k BiGRU mean: 0.745773.
+Best new combination improves the previous overall best by approximately 31.9%.
+Total recorded training/validation time: 686.61 seconds, excluding preprocessing,
+checkpoint I/O, transfers and setup. All files and checkpoints saved locally and remotely.
+No predictions submitted. GPU pod remains allocated.
