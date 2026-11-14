@@ -1,0 +1,9 @@
+{
+  "competition": "ventilator-pressure-prediction",
+  "score": 0.30326,
+  "local_validation_mae": 0.32928264141082764,
+  "csv": "submission_abc_032928.csv",
+  "csv_sha256": "4cb3d0875643b0e9f348a072458277d73926ef3e58c51433ea154d2bfcdbbeb9",
+  "result_url": "https://aicodinggym.com/challenges/mle/ventilator-pressure-prediction",
+  "cli_exit_code": 0
+}

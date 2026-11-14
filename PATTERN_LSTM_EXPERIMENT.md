@@ -117,3 +117,22 @@ OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8 MKL_NUM_THREADS=8 python -u train_patte
   --reference ../strategy_experiment/results/ensemble_predictions.npz \
   --output reproduction_results --seeds 527193 1804369 --epochs 40
 ```
+
+
+## Coding Gym submission — November 13, 2026
+
+After explicit user authorization, submitted the exact ABC two-seed ensemble.
+Coding Gym returned **MAE 0.30326** (local validation: 0.32928264).
+Result URL: https://aicodinggym.com/challenges/mle/ventilator-pressure-prediction
+
+CSV: `pattern_lstm_experiment/submission_abc_032928.csv`, 603,600 rows.
+SHA-256: `4cb3d0875643b0e9f348a072458277d73926ef3e58c51433ea154d2bfcdbbeb9`.
+Verified original sample IDs/order, finite predictions, and checkpoint hashes.
+Inference uses frozen training statistics and the two best ABC checkpoints;
+there is no residual correction, retraining, or prediction clipping.
+
+DataHub GPU inference sampled at 90–91% utilization on the GTX 1080 Ti, with
+724 MiB total device memory in use. It was idle before inference because training
+had completed. Historical sustained training utilization was not recorded and
+cannot be asserted as 100%. Session-log upload was disabled for this submission.
+The CLI also reported code pushed to branch `ventilator-pressure-prediction`.
